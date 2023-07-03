@@ -21,7 +21,7 @@ public class GetGoalController {
     @PostMapping("/getGoal/{userId}")
     BaseResponse<List<Goal>> getGoal(@PathVariable("userId") Long userId) throws BaseException {
         List<Goal> goals = getGoalService.getGoal(userId);
-        return new BaseResponse<List<Goal>>(BaseResponseStatus.SUCCESS, goals);
+        return new BaseResponse<List<Goal>>(goals);
     }
 
 
