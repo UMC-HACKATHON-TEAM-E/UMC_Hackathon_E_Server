@@ -14,10 +14,11 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "goal_record")
 public class GoalRecord {
     @Id
     @Column(name = "goal_record_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long goalRecordId;
     @ManyToOne
     @JoinColumn(name = "goal_id")
