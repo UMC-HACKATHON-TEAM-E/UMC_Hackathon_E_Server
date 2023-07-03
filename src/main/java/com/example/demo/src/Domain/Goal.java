@@ -13,6 +13,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="Goal")
 public class Goal {
 
     @Id
@@ -52,4 +53,9 @@ public class Goal {
         this.count = 0;
         return this;
     }
+  
+    public void update(){
+        this.count+=1;
+    }
+  
 }
