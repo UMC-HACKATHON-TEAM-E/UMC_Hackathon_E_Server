@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.transaction.Transactional;
+import java.text.ParseException;
 
 @RestController
 @RequestMapping("/goal")
@@ -25,4 +26,12 @@ public class GoalController {
         Goal goal = goalService.update(goalId);;
         return new BaseResponse<>(goal);
     }
+
+    @GetMapping("/progress/{goalId}")
+    public BaseResponse<Double> progress(@PathVariable("goalId") Long goalId) throws ParseException {
+        Double ans = goalService.progress(goalId);;
+        return new BaseResponse<>(ans);
+    }
+
+
 }

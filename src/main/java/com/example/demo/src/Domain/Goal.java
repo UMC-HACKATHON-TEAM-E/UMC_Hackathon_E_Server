@@ -58,5 +58,5 @@ public class Goal {
     public void update(){
         this.count+=1;
     }
-  
+
 }
