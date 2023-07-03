@@ -14,7 +14,8 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="User")
+@Table(name = "user")
+
 //@DynamicInsert
 public class User {
     @Id

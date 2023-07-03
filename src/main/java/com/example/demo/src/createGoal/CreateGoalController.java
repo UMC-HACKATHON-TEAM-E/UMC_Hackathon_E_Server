@@ -17,7 +17,8 @@ public class CreateGoalController {
     @PostMapping("")
     public BaseResponse<PostCreateGoalRes> createGoal(PostCreateGoalReq postCreateGoalReq) {
         try {
-            return new BaseResponse<>(createGoalService.createGoal(postCreateGoalReq));
+            PostCreateGoalRes res = createGoalService.createGoal(postCreateGoalReq);
+            return new BaseResponse<>(res);
         }
         catch (BaseException e) {
             return new BaseResponse<>(e.getStatus());
