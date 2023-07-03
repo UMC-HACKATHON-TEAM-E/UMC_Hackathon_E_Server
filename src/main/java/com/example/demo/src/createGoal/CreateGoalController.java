@@ -2,6 +2,7 @@ package com.example.demo.src.createGoal;
 
 import com.example.demo.config.BaseException;
 import com.example.demo.config.BaseResponse;
+import com.example.demo.src.Domain.User;
 import com.example.demo.src.createGoal.dto.PostCreateGoalReq;
 import com.example.demo.src.createGoal.dto.PostCreateGoalRes;
 import lombok.RequiredArgsConstructor;
