@@ -12,6 +12,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="Goal")
 public class Goal {
 
     @Id
