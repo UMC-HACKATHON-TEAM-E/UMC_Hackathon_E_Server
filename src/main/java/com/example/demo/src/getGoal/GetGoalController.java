@@ -24,4 +24,7 @@ public class GetGoalController {
         return new BaseResponse<List<Goal>>(goals);
     }
 
+
+
+
 }
