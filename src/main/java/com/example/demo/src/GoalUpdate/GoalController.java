@@ -25,4 +25,11 @@ public class GoalController {
         Goal goal = goalService.update(goalId);;
         return new BaseResponse<>(goal);
     }
+     @GetMapping("/progress/{goalId}")
+    public BaseResponse<ProgressRes> progress(@PathVariable("goalId") Long goalId) throws ParseException {
+        Goal goal =goalService.read(goalId);
+        Double ans = goalService.progress(goalId);
+        ProgressRes progressRes = new ProgressRes(goal,ans);
+        return new BaseResponse<>(progressRes);
+    }
 }
