@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("goal")
+@RequestMapping("/goal")
 @RequiredArgsConstructor
 public class GoalController {
 
     private final GoalService goalService;
-    @GetMapping("/{userId}/{goalId}")
-    public BaseResponse<Goal> update(@PathVariable("userId") Long userId, @PathVariable("goalId") Long goalId){
-        Goal goal = goalService.update(userId, goalId);;
+    @GetMapping("/{goalId}")
+    public BaseResponse<Goal> update(@PathVariable("goalId") Long goalId){
+        Goal goal = goalService.update(goalId);;
         return new BaseResponse<>(goal);
     }
 }
