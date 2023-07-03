@@ -32,5 +32,9 @@ public class Goal {
     @Column(name = "count")
     private int count;
 
+    public void update(){
+        this.count+=1;
+    }
+
 
 }
