@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 8080
 
 spring:
   application:
@@ -7,8 +7,13 @@ spring:
 
   datasource:
     platform: mysql
-    url: jdbc:mysql://database.ccnujuyzzot8.ap-northeast-2.rds.amazonaws.com:3306/UmcServer # 변경해주세요
-    username:  admin
-    password:  hyunbin7231
+    url: jdbc:mysql://hackerthon-db.cv2821t7oybx.ap-northeast-2.rds.amazonaws.com:3306/hackerthon?useUnicode=true&serverTimezone=Asia/Seoul
+    username: admin
+    password: hackerthon-e
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql 8버전
     # driver-class-name: com.mysql.jdbc.Driver # mysql 5버전
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
