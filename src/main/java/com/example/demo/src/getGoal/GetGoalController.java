@@ -5,10 +5,7 @@ import com.example.demo.config.BaseResponse;
 import com.example.demo.config.BaseResponseStatus;
 import com.example.demo.src.Domain.Goal;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +15,7 @@ import java.util.List;
 public class GetGoalController {
     private final GetGoalService getGoalService;
 
-    @PostMapping("/getGoal/{userId}")
+    @GetMapping("/getGoal/{userId}")
     BaseResponse<List<Goal>> getGoal(@PathVariable("userId") Long userId) throws BaseException {
         List<Goal> goals = getGoalService.getGoal(userId);
         return new BaseResponse<List<Goal>>(goals);
