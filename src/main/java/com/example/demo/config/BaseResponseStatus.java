@@ -58,7 +58,8 @@ public enum BaseResponseStatus {
 
 
     // 5000 : 필요시 만들어서 쓰세요
-    POST_CREATE_GOAL_NOT_EXISTS_USER(false,5000, "존재하지 않는 사용자 입니다.");
+    POST_CREATE_GOAL_NOT_EXISTS_USER(false,5000, "존재하지 않는 사용자 입니다."),
+    POST_CREATE_GOAL_RECORD_NOT_EXISTS_USER(false,5001, "존재하지 않는 목표 입니다.");
     // 6000 : 필요시 만들어서 쓰세요
 
 
